@@ -17,11 +17,14 @@
    <widget class="QLineEdit" name="cadena">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>100</y>
-      <width>421</width>
-      <height>20</height>
+      <x>10</x>
+      <y>90</y>
+      <width>741</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font:16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="placeholderText">
      <string>Ingrese la sentecia SQL</string>
@@ -30,14 +33,17 @@
    <widget class="QPushButton" name="btnSalir">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>240</y>
-      <width>75</width>
-      <height>23</height>
+      <x>460</x>
+      <y>250</y>
+      <width>281</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>Salir</string>
@@ -48,15 +54,18 @@
      <rect>
       <x>30</x>
       <y>250</y>
-      <width>131</width>
-      <height>23</height>
+      <width>281</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
     <property name="text">
-     <string>Analizar Sentecia</string>
+     <string>Analizar Sentencia</string>
     </property>
    </widget>
    <widget class="QLabel" name="lblAnalisis">
@@ -68,8 +77,27 @@
       <height>61</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ANALIZADOR SINTACTICO</string>
     </property>
    </widget>
   </widget>

@@ -16,13 +16,15 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
         
         self.setWindowTitle('.:: ANALIZADOR SINTACTICO::. ')
-        self.setFixedSize(800, 300)
+        self.setFixedSize(770, 300)
         
         self.btnAnalizar.clicked.connect(self.validacion)
         self.btnSalir.clicked.connect(self.salir)
     
     def validacion(self):            
         cadenaTexto = self.obtenerCadena()
+        
+        # if cadenaTexto[-2:]
         if not cadenaTexto:
             QMessageBox.warning(None, 'vacio', 'Campo vacio')
         else:
@@ -31,7 +33,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.lblAnalisis.setText('SENTENCIA CORRECTA')
                 QMessageBox.information(None, 'Validación', '¡¡La Sentencia SQL ingresada es valida!!')
             else:
-                self.lblAnalisis.setText('SENTECIA INCORRECTA')
+                self.lblAnalisis.setText('SENTENCIA INCORRECTA')
                 QMessageBox.critical(None, 'Validación', '¡¡La Sentencia SQL ingresada no es valida!!')
     
     
