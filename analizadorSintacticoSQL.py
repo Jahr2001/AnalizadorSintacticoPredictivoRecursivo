@@ -29,7 +29,7 @@ def ID(texto):
     return False
 
 def TIPO(texto):
-    if (texto == "TINYINT") or (texto == "INTEGER") or (texto == "VARCHAR") or (texto == "BLOB") or (texto == "DATETIME") or (texto == "NULL") or (texto == "AUTO_INCREMENT") or (texto == "TINYINT;") or (texto == "INTEGER;") or (texto == "VARCHAR;") or (texto == "BLOB;") or (texto == "DATETIME;") or (texto == "NULL;") or (texto == "AUTO_INCREMENT;"):
+    if (texto == "TINYINT") or (texto == "INTEGER") or (texto == "VARCHAR") or (texto == "BLOB") or (texto == "DATETIME") or (texto == "NULL") or (texto == "AUTO_INCREMENT"):
         return True
     return False
 
@@ -39,11 +39,8 @@ def PCOMA(texto):
     return False
 
 def validar(cadenaTexto):
-
     texto = cadenaTexto.split(' ')
-
-    if len(texto) == 8 or len(texto) == 7:
-        
+    if len(texto) == 8:
         alter = ALTER(texto[0])
         if alter:
             print(alter)
@@ -65,14 +62,10 @@ def validar(cadenaTexto):
                                 tipo = TIPO(texto[6])
                                 if tipo:
                                     print(tipo)
-                                    if len(texto) == 8:
-                                        pcoma = PCOMA(texto[7])
-                                        if pcoma:
-                                            print(pcoma)
-                                            print('SENTENCIA CORRECTA!')
-                                            return True
-                                    else:
-                                        print('SENTENCIA CORRECTA!')
+                                    pcoma = PCOMA(texto[7])
+                                    if pcoma:
+                                        print(pcoma)
+                                        print('SENTENCIA CORRECTA')
                                         return True
     return False
 
